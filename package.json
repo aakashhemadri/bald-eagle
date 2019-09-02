@@ -2,7 +2,7 @@
 	"name": "bald-eagle",
 	"version": "0.2.0",
 	"private": false,
-	"proxy": "aakashhemadri.github.io/bald-eagle",
+	"homepage": "https://aakashhemadri.github.io/bald-eagle",
 	"dependencies": {
 		"bootstrap": "^4.3.1",
 		"node-sass": "^4.12.0",
