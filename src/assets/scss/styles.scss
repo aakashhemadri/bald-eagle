@@ -1,0 +1,20 @@
+// @import "~bootstrap/scss/bootstrap.scss";
+
+@import "assets/neon-glow/neon-glow.scss";
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.date {
+  max-width: 500px;
+}
