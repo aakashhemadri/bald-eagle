@@ -31,15 +31,18 @@ export default class Nursery extends Component {
 							<Badge>{this.props.location.state.date}</Badge>&nbsp;
 						</Col>
 					</Row>
-					<Row className="p-2 h-100 w-100 ">
+					<Row className="p-2 h-100 w-100 d-flex justify-content-center align-items-center">
 						{this.state.records.map((record, index) => (
 							<Col xs="12" md="4" lg="3" className="p-2">
-								<Card color="secondary">
+								<Card>
 									<CardHeader>
-										<CardTitle className="d-flex justify-content-between">
+										<CardTitle className="d-flex justify-content-between align-items-center">
 											{record.student}
-											<Badge>{record.date}</Badge>
-											<Badge>{record.class_type}</Badge>
+											<div class="d-flex flex-column justify-content-end align-items-center">
+												<Badge>{record.date}</Badge>
+												<Badge>{record.class_type}</Badge>
+											</div>
+
 										</CardTitle>
 									</CardHeader>
 									<CardBody>
@@ -71,16 +74,16 @@ export default class Nursery extends Component {
 													Concepts Taught:
 											</ListGroupItemHeading>
 												<ListGroupItemText className="d-flex justify-content-between">
-													Rhymes and Phonics:&nbsp;<h5><Badge>{record.concepts_taught.rhymes_phonics}</Badge></h5>
+													Rhymes and Phonics:&nbsp;<p>{record.concepts_taught.rhymes_phonics}</p>
 												</ListGroupItemText>
 												<ListGroupItemText className="d-flex justify-content-between">
-													Integrated Primer:&nbsp;<h5><Badge>{record.concepts_taught.integrated_primer}</Badge></h5>
+													Integrated Primer:&nbsp;<p>{record.concepts_taught.integrated_primer}</p>
 												</ListGroupItemText>
 												<ListGroupItemText className="d-flex justify-content-between">
-													Alphabets:&nbsp;<h5><Badge>{record.concepts_taught.alphabets}</Badge></h5>
+													Alphabets:&nbsp;<p>{record.concepts_taught.alphabets}</p>
 												</ListGroupItemText>
 												<ListGroupItemText className="d-flex justify-content-between">
-													Numbers:&nbsp;<h5><Badge>{record.concepts_taught.numbers}</Badge></h5>
+													Numbers:&nbsp;<p>{record.concepts_taught.numbers}</p>
 												</ListGroupItemText>
 											</ListGroupItem>
 											<ListGroupItem className="d-flex flex-column">
@@ -149,13 +152,13 @@ export default class Nursery extends Component {
 													CEP:
 											</ListGroupItemHeading>
 												<ListGroupItemText className="d-flex justify-content-between">
-													Library Comments:&nbsp;<h5><Badge>{record.cep.library_components}</Badge></h5>
+													Library Comments:&nbsp;<p>{record.cep_class.library_components}</p>
 												</ListGroupItemText>
 												<ListGroupItemText className="d-flex justify-content-between">
-													CEP Tool:&nbsp;<h5><Badge>{record.cep.tools}</Badge></h5>
+													CEP Tool:&nbsp;<p>{record.cep_class.tools}</p>
 												</ListGroupItemText>
 												<ListGroupItemText className="d-flex justify-content-between">
-													CEP comments:&nbsp;<h5><Badge>{record.cep.comments}</Badge></h5>
+													CEP comments:&nbsp;<p>{record.cep_class.comments}</p>
 												</ListGroupItemText>
 											</ListGroupItem>
 											{/* Tests */}
@@ -170,7 +173,7 @@ export default class Nursery extends Component {
 																Total:&nbsp;<h5><Badge>{record.tests.slip.total}</Badge></h5>
 															</ListGroupItemText>
 															<ListGroupItemText className="d-flex justify-content-between">
-																Comments:&nbsp;<h5><Badge>{record.tests.slip.total}</Badge></h5>
+																Comments:&nbsp;<p>{record.tests.slip.total}</p>
 															</ListGroupItemText>
 														</ListGroupItem>
 													</React.Fragment>)
@@ -197,7 +200,7 @@ export default class Nursery extends Component {
 																Total:&nbsp;<h5><Badge>{record.tests.unit.total}</Badge></h5>
 															</ListGroupItemText>
 															<ListGroupItemText className="d-flex justify-content-between">
-																Comments:&nbsp;<h5><Badge>{record.tests.unit.comments}</Badge></h5>
+																Comments:&nbsp;<p>{record.tests.unit.comments}</p>
 															</ListGroupItemText>
 														</ListGroupItem>
 													</React.Fragment>)
@@ -227,20 +230,29 @@ export default class Nursery extends Component {
 																Total:&nbsp;<h5><Badge>{record.assessments.total}</Badge></h5>
 															</ListGroupItemText>
 															<ListGroupItemText className="d-flex justify-content-between">
-																Comments:&nbsp;<h5><Badge>{record.assessments.comments}</Badge></h5>
+																Comments:&nbsp;<p>{record.assessments.comments}</p>
 															</ListGroupItemText>
 														</ListGroupItem>
 													</React.Fragment>)
 												}
 											}}
+											{/* Feedback */}
+											<ListGroupItem className="d-flex flex-column">
+												<ListGroupItemHeading>
+													Comments & Feedback:
+											</ListGroupItemHeading>
+												<ListGroupItemText className="d-flex justify-content-between">
+													<p>{record.feedback}</p>
+												</ListGroupItemText>
+											</ListGroupItem>
 										</ListGroup>
 									</CardBody>
 								</Card>
-							</Col>
-						))}
+							</Col>))
+						}
 					</Row>
 				</div>
-			</React.Fragment >
+			</React.Fragment>
 		)
 	}
 	fetchSheet(center, standard, student, date) {

@@ -12,15 +12,11 @@ export default function load(callback, center, standard, student, date) {
 					const data = response.result.values;
 					var records = [];
 					var record = [];
-					console.log(date, record[1])
+					console.log(data)
 					for (record of data) {
-						// date = date.split('-');
-						// date = new Date(date[0], date[1], date[2]);
-						// record[1] = record[1].split('/');
-						// record[1] = new Date(record[1][2], record[1][1], record[1][0])
-						if (((standard !== "Class") ? (record[3] === standard) : 1) && ((student !== "Student") ? (student === record[4]) : 1) && ((date !== "") ? /*(Date.parse(date) === Date.parse(record[1]))*/1 : 1)) {
+						if (record[3] === standard) {
 							records.push({
-								date: record[1],
+								date: record[1].split('/').reverse().join('-'),
 								volunteer: record[2],
 								standard: record[3],
 								student: record[4],
@@ -96,7 +92,7 @@ export default function load(callback, center, standard, student, date) {
 								feedback: record[113]
 							})
 						}
-						else if (((standard !== "Class") ? (record[3] === standard) : 1) && ((student !== "Student") ? (student === record[47]) : 1) && ((date !== "") ? /*(Date.parse(date) === Date.parse(record[1]))*/1 : 1)) {
+						if ((record[3] === standard)) {
 							records.push({
 								date: record[1],
 								volunteer: record[2],
@@ -178,7 +174,7 @@ export default function load(callback, center, standard, student, date) {
 								feedback: record[113]
 							})
 						}
-						else if (((standard !== "Class") ? (record[3] === standard) : 1) && ((student !== "Student") ? (student === record[74]) : 1) && ((date !== "") ? /*(Date.parse(date) === Date.parse(record[1]))*/1 : 1)) {
+						else if ((standard === record[3])) {
 							records.push({
 								date: record[1],
 								volunteer: record[2],
@@ -255,13 +251,19 @@ export default function load(callback, center, standard, student, date) {
 								feedback: record[113]
 							})
 						}
-						else {
-							callback({
-								records
-							});
-						}
-						callback({ records });
 					}
+					if (date !== "") {
+						records = records.filter((record) => {
+							return (date === record.date) && (record.standard === standard) && (record.student === student ? true : ((student === "Student") ? true : false))
+						})
+					}
+					else {
+						records = records.filter((record) => {
+							return (record.standard === standard) && (record.student === student ? true : ((student === "Student") ? true : false))
+						})
+					}
+					records = records.sort().reverse();
+					callback({ records });
 				},
 				response => {
 					callback(false, response.result.error);

@@ -28,6 +28,11 @@ class Home extends Component {
 			date: "",
 		}
 	}
+	componentDidMount() {
+		this.setState({
+			student_list: config.MC1.student.list
+		})
+	}
 	toggle = dropdown => ev => {
 		this.setState(prevState => ({ [dropdown]: !prevState[dropdown] }));
 	}
@@ -45,15 +50,11 @@ class Home extends Component {
 	handleDate(event) {
 		this.setState({ date: event.target.value })
 	}
-	componentDidMount() {
-		// 1. Load the JavaScript client library.
-
-	}
 	render() {
 		return (
 			<Container fluid className="h-100 w-100 d-flex flex-column justify-content-center align-items-center ">
-				<div class="p-2 w-100 d-flex justify-content-center align-items-center"><h1>Class Log</h1></div>
-				<div class="p-2 w-100 d-flex justify-content-center align-items-center">
+				<div className="p-2 w-100 d-flex justify-content-center align-items-center"><h1>Class Log</h1></div>
+				<div className="p-2 w-100 d-flex justify-content-center align-items-center">
 					<Dropdown className="p-1" name="center" isOpen={this.state.centerDropdown} toggle={this.toggle('centerDropdown')}>
 						<DropdownToggle caret>
 							{this.state.center}
@@ -80,23 +81,23 @@ class Home extends Component {
 						<DropdownToggle caret>{this.state.student}</DropdownToggle>
 						<DropdownMenu>
 							{this.state.student_list.map((student, index) => (
-								<DropdownItem name={student} onClick={this.handleStudent}>{student}</DropdownItem>
+								<DropdownItem key={index} name={student} onClick={this.handleStudent}>{student}</DropdownItem>
 							))}
 						</DropdownMenu>
 					</Dropdown>
 				</div>
-				<div class="p-2 w-100 d-flex justify-content-center date">
+				<div className="p-2 w-100 d-flex justify-content-center date">
 					<InputGroup>
 						<InputGroupAddon addonType="prepend">Date</InputGroupAddon>
 						<Input name="date" type="date" placeholder="Enter date" onChange={this.handleDate} value={this.state.date} />
 					</InputGroup>
 				</div>
-				<div class="p-2 d-flex justify-content-center">
+				<div className="p-2 d-flex justify-content-center">
 					<Button onClick={this.handleSubmit}>
 						Submit
 						</Button>
 				</div>
-			</Container >
+			</Container>
 		);
 	}
 	async handleSubmit() {

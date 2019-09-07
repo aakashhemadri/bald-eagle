@@ -4,6 +4,7 @@ import { createBrowserHistory } from "history";
 import { ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import './App.scss';
+import Loading from './helpers/Loading.js';
 
 const Home = React.lazy(() => import('./views/Pages/Home'));
 const Page404 = React.lazy(() => import('./views/Pages/Page404'));
@@ -13,13 +14,12 @@ const Nursery = React.lazy(() => import('./views/Nursery'));
 const LKGUKG = React.lazy(() => import('./views/LKG_UKG.js'));
 const Levels = React.lazy(() => import('./views/Levels.js'));
 
-const Loading = (() => import('./helpers/Loading.js'));
 
 export default class App extends Component {
 	render() {
 		return (
 			<BrowserRouter history={createBrowserHistory()}>
-				<React.Suspense fallback={() => (<Loading />)}>
+				<React.Suspense fallback={<Loading />}>
 					<ToastContainer autoClose={2000} />
 					<Switch>
 						<Route exact path="/nursery" name="Nursery" render={props => <Nursery {...props} />} />
