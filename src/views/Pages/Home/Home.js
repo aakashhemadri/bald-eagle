@@ -29,9 +29,7 @@ class Home extends Component {
 		}
 	}
 	componentDidMount() {
-		this.setState({
-			student_list: config.MC1.student.list
-		})
+
 	}
 	toggle = dropdown => ev => {
 		this.setState(prevState => ({ [dropdown]: !prevState[dropdown] }));
@@ -100,7 +98,7 @@ class Home extends Component {
 			</Container>
 		);
 	}
-	async handleSubmit() {
+	handleSubmit() {
 		if (this.state.standard === "Nursery") {
 			this.props.history.push({
 				pathname: '/nursery',
