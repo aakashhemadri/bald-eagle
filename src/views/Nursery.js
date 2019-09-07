@@ -32,9 +32,8 @@ export default class Nursery extends Component {
 						</Col>
 					</Row>
 					<Row className="d-flex justify-content-center align-items-center">
-
-						{this.state.records.map((record, index) => (
-							<Col xs="12" md="4" lg="3" className="d-flex flex-column p-2">
+						<Col xs="12" md="4" lg="3" className="d-flex flex-column p-2">
+							{this.state.records.map((record, index) => (
 								<Card className="d-flex my-2">
 									<CardHeader>
 										<CardTitle className="d-flex justify-content-between align-items-center">
@@ -247,8 +246,8 @@ export default class Nursery extends Component {
 											</ListGroupItem>
 										</ListGroup>
 									</CardBody>
-								</Card>
-							</Col>))}
+								</Card>))}
+						</Col>
 					</Row>
 				</div>
 			</React.Fragment>
