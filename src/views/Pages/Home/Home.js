@@ -20,7 +20,7 @@ class Home extends Component {
 			standardDropdown: false,
 			studentDropdown: false,
 			records: [],
-			student_list: [],
+			student_list: ["Retrieving student list..."],
 			error: null,
 			center: "Center",
 			standard: "Class",
@@ -79,7 +79,7 @@ class Home extends Component {
 						<DropdownToggle caret>{this.state.student}</DropdownToggle>
 						<DropdownMenu>
 							{this.state.student_list.map((student, index) => (
-								<DropdownItem key={index} name={student} onClick={this.handleStudent}>{student}</DropdownItem>
+								<DropdownItem disabled={student === "Retrieving student list..." ? true : false} key={index} name={student} onClick={this.handleStudent}>{student}</DropdownItem>
 							))}
 						</DropdownMenu>
 					</Dropdown>
