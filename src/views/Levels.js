@@ -31,10 +31,10 @@ export default class Nursery extends Component {
 							<Badge>{this.props.location.state.date}</Badge>&nbsp;
 						</Col>
 					</Row>
-					<Row className="d-flex justify-content-center align-items-center">
-						<Col xs="12" md="4" lg="3" className="d-flex flex-column p-2">
+					<Row className="w-100 d-flex justify-content-center align-items-center">
+						<Col xs="12" md="4" lg="3" className="w-100 d-flex flex-column p-2">
 							{this.state.records.map((record, index) => (
-								<Card className="d-flex my-2">
+								<Card className="w-100 d-flex my-2">
 									<CardHeader>
 										<CardTitle className="d-flex justify-content-between align-items-center">
 											{record.student}

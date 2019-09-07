@@ -257,7 +257,9 @@ export default function load(callback, center, standard, student, date) {
 							records = []
 
 					}
-					records = records.sort().reverse();
+					records = records.filter((record) => {
+						return (student === "Student" ? true : (record.student === student));
+					}).sort().reverse();
 					callback({ records });
 				},
 				response => {
