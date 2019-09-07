@@ -15,7 +15,9 @@
 	},
 	"scripts": {
 		"start": "react-scripts start",
-		"build": "react-scripts build",
+		"prebuild": "rm -rf ./build",
+		"build": "react-scripts build && javascript-obfuscator ./build --output . --config ./js-obfuscate.js",
+		"postbuild": "rm -rf build/**/**/*.map",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"
 	},
@@ -33,5 +35,8 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
+	},
+	"devDependencies": {
+		"javascript-obfuscator": "^0.18.1"
 	}
 }
