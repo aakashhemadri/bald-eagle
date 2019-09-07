@@ -11,7 +11,7 @@ export default function load(callback, center, standard, student, date) {
 				response => {
 					const data = (response.result.values).filter((record) => {
 						return record[3] === standard && (record[1] === (date !== "" ? date.split('-').reverse().join('/') : record[1]))
-					}).sort().reverse();
+					});
 					var records = [];
 					var record = [];
 					console.log(data)
@@ -253,7 +253,7 @@ export default function load(callback, center, standard, student, date) {
 								})
 							}
 					}
-					console.log(records)
+					records = records.sort().reverse();
 					callback({ records });
 				},
 				response => {

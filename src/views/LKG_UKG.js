@@ -74,16 +74,16 @@ export default class Nursery extends Component {
 													Concepts Taught:
 											</ListGroupItemHeading>
 												<ListGroupItemText className="d-flex justify-content-between">
-													Phonics & Rhymes:&nbsp;<h5><Badge>{record.concepts_taught.phonics_rhymes}</Badge></h5>
+													Phonics & Rhymes:&nbsp;<p>{record.concepts_taught.phonics_rhymes}</p>
 												</ListGroupItemText>
 												<ListGroupItemText className="d-flex justify-content-between">
-													Literacy:&nbsp;<h5><Badge>{record.concepts_taught.literacy}</Badge></h5>
+													Literacy:&nbsp;<p>{record.concepts_taught.literacy}</p>
 												</ListGroupItemText>
 												<ListGroupItemText className="d-flex justify-content-between">
-													Numeracy:&nbsp;<h5><Badge>{record.concepts_taught.numeracy}</Badge></h5>
+													Numeracy:&nbsp;<p>{record.concepts_taught.numeracy}</p>
 												</ListGroupItemText>
 												<ListGroupItemText className="d-flex justify-content-between">
-													General Awareness:&nbsp;<h5><Badge>{record.concepts_taught.general_awareness}</Badge></h5>
+													General Awareness:&nbsp;<p>{record.concepts_taught.general_awareness}</p>
 												</ListGroupItemText>
 											</ListGroupItem>
 											<ListGroupItem className="d-flex flex-column">

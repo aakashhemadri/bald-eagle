@@ -57,16 +57,10 @@ export default class Nursery extends Component {
 													Chapters Covered:
 											</ListGroupItemHeading>
 												<ListGroupItemText className="d-flex justify-content-between">
-													Rhymes and Phonics:&nbsp;<h5><Badge>{record.chapters_covered.rhymes_phonics}</Badge></h5>
+													Textbook:&nbsp;<h5><Badge>{record.chapters_covered.textbook}</Badge></h5>
 												</ListGroupItemText>
 												<ListGroupItemText className="d-flex justify-content-between">
-													Integrated Primer:&nbsp;<h5><Badge>{record.chapters_covered.integrated_primer}</Badge></h5>
-												</ListGroupItemText>
-												<ListGroupItemText className="d-flex justify-content-between">
-													Alphabets:&nbsp;<h5><Badge>{record.chapters_covered.alphabets}</Badge></h5>
-												</ListGroupItemText>
-												<ListGroupItemText className="d-flex justify-content-between">
-													Numbers:&nbsp;<h5><Badge>{record.chapters_covered.numbers}</Badge></h5>
+													Activity:&nbsp;<h5><Badge>{record.chapters_covered.activity}</Badge></h5>
 												</ListGroupItemText>
 											</ListGroupItem>
 											<ListGroupItem className="d-flex flex-column">
@@ -74,33 +68,15 @@ export default class Nursery extends Component {
 													Concepts Taught:
 											</ListGroupItemHeading>
 												<ListGroupItemText className="d-flex justify-content-between">
-													Rhymes and Phonics:&nbsp;<p>{record.concepts_taught.rhymes_phonics}</p>
+													Textbook:&nbsp;<p>{record.concepts_taught.textbook}</p>
 												</ListGroupItemText>
 												<ListGroupItemText className="d-flex justify-content-between">
-													Integrated Primer:&nbsp;<p>{record.concepts_taught.integrated_primer}</p>
-												</ListGroupItemText>
-												<ListGroupItemText className="d-flex justify-content-between">
-													Alphabets:&nbsp;<p>{record.concepts_taught.alphabets}</p>
-												</ListGroupItemText>
-												<ListGroupItemText className="d-flex justify-content-between">
-													Numbers:&nbsp;<p>{record.concepts_taught.numbers}</p>
+													Activity:&nbsp;<p>{record.concepts_taught.activity}</p>
 												</ListGroupItemText>
 											</ListGroupItem>
 											<ListGroupItem className="d-flex flex-column">
-												<ListGroupItemHeading>
-													Textbook Pages:
-											</ListGroupItemHeading>
 												<ListGroupItemText className="d-flex justify-content-between">
-													Rhymes and Phonics:&nbsp;<h5><Badge>{record.text_pages.rhymes_phonics}</Badge></h5>
-												</ListGroupItemText>
-												<ListGroupItemText className="d-flex justify-content-between">
-													Integrated Primer:&nbsp;<h5><Badge>{record.text_pages.integrated_primer}</Badge></h5>
-												</ListGroupItemText>
-												<ListGroupItemText className="d-flex justify-content-between">
-													Alphabets:&nbsp;<h5><Badge>{record.text_pages.alphabets}</Badge></h5>
-												</ListGroupItemText>
-												<ListGroupItemText className="d-flex justify-content-between">
-													Numbers:&nbsp;<h5><Badge>{record.text_pages.numbers}</Badge></h5>
+													<h5>Textbook Pages:</h5>&nbsp;<h5><Badge>{record.text_pages}</Badge></h5>
 												</ListGroupItemText>
 											</ListGroupItem>
 											<ListGroupItem className="d-flex flex-column">
