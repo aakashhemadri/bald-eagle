@@ -19,7 +19,7 @@ export default class App extends Component {
 	render() {
 		return (
 			<BrowserRouter history={createBrowserHistory()}>
-				<React.Suspense fallback={<div>loading</div>}>
+				<React.Suspense fallback={<Loading />}>
 					<ToastContainer autoClose={2000} />
 					<Switch>
 						<Route exact path="/nursery" name="Nursery" render={props => <Nursery {...props} />} />

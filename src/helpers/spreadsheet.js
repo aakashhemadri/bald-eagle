@@ -252,6 +252,10 @@ export default function load(callback, center, standard, student, date) {
 									feedback: record[112]
 								})
 							}
+							break;
+						default:
+							records = []
+
 					}
 					records = records.sort().reverse();
 					callback({ records });
