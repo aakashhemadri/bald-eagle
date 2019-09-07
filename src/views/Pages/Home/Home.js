@@ -50,14 +50,14 @@ class Home extends Component {
 	}
 	render() {
 		return (
-			<Container fluid className="h-100 w-100 d-flex flex-column justify-content-center align-items-center ">
-				<div className="p-2 w-100 d-flex justify-content-center align-items-center"><h1>Class Log</h1></div>
+			<Container fluid className="bg-primary h-100 w-100 d-flex flex-column justify-content-center align-items-center ">
+				<div className="text-light p-2 w-100 d-flex justify-content-center align-items-center"><h1>Class Log</h1></div>
 				<div className="p-2 w-100 d-flex justify-content-center align-items-center">
 					<Dropdown className="p-1" name="center" isOpen={this.state.centerDropdown} toggle={this.toggle('centerDropdown')}>
 						<DropdownToggle caret>
 							{this.state.center}
 						</DropdownToggle>
-						<DropdownMenu>
+						<DropdownMenu >
 							<DropdownItem header>Choose your center</DropdownItem>
 							<DropdownItem divider />
 							<DropdownItem name="MC1" onClick={this.handleCenter}>Mount Carmel 1</DropdownItem>

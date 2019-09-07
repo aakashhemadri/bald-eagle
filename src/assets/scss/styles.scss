@@ -1,19 +1,14 @@
-@import "~bootstrap/scss/bootstrap.scss";
+// @import "~bootstrap/scss/bootstrap.scss";
 
 // @import "assets/neon-glow/neon-glow.scss";
-@import "assets/greyson/theme.css";
+@import "assets/greyson/theme.scss";
 
 html,
 body,
 #root {
   height: 100%;
   width: 100%;
-}
-
-@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
-
-body {
-  font-family: "Lato", sans-serif;
+  background-color: #2f3c48;
 }
 
 .date {

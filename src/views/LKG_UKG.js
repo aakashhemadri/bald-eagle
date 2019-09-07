@@ -23,8 +23,8 @@ export default class Nursery extends Component {
 	render() {
 		return (
 			<React.Fragment>
-				<div class="d-flex flex-column justify-content-center align-items-center">
-					<Row className="p-2 h-100 w-100">
+				<div className="h-100 w-100 d-flex flex-column p-1">
+					<Row className="p-2">
 						<Col className="d-flex justify-content-center align-items-center">
 							<Badge>{this.props.location.state.center}</Badge>&nbsp;
 							<Badge>{this.props.location.state.standard}</Badge>&nbsp;
@@ -32,10 +32,10 @@ export default class Nursery extends Component {
 							<Badge>{this.props.location.state.date}</Badge>&nbsp;
 						</Col>
 					</Row>
-					<Row className="p-2 h-100 w-100 d-flex justify-content-center align-items-center">
-						{this.state.records.map((record, index) => (
-							<Col xs="12" md="4" lg="3" className="p-2">
-								<Card>
+					<Row className="d-flex justify-content-center align-items-center">
+						<Col xs="12" md="4" lg="3" className="d-flex flex-column p-2">
+							{this.state.records.map((record, index) => (
+								<Card className="d-flex my-2">
 									<CardHeader>
 										<CardTitle className="d-flex justify-content-between align-items-center">
 											{record.student}
@@ -91,16 +91,16 @@ export default class Nursery extends Component {
 													Textbook Pages:
 											</ListGroupItemHeading>
 												<ListGroupItemText className="d-flex justify-content-between">
-													Phonics & Rhymes:&nbsp;<h5><Badge>{record.text_pages.phonics_rhymes}</Badge></h5>
+													Phonics & Rhymes:&nbsp;<p>{record.text_pages.phonics_rhymes}</p>
 												</ListGroupItemText>
 												<ListGroupItemText className="d-flex justify-content-between">
-													Literacy:&nbsp;<h5><Badge>{record.text_pages.literacy}</Badge></h5>
+													Literacy:&nbsp;<p>{record.text_pages.literacy}</p>
 												</ListGroupItemText>
 												<ListGroupItemText className="d-flex justify-content-between">
-													Numeracy:&nbsp;<h5><Badge>{record.text_pages.numeracy}</Badge></h5>
+													Numeracy:&nbsp;<p>{record.text_pages.numeracy}</p>
 												</ListGroupItemText>
 												<ListGroupItemText className="d-flex justify-content-between">
-													General Awareness:&nbsp;<h5><Badge>{record.text_pages.general_awareness}</Badge></h5>
+													General Awareness:&nbsp;<p>{record.text_pages.general_awareness}</p>
 												</ListGroupItemText>
 											</ListGroupItem>
 											<ListGroupItem className="d-flex flex-column">
@@ -108,13 +108,13 @@ export default class Nursery extends Component {
 													Activity Pages:
 											</ListGroupItemHeading>
 												<ListGroupItemText className="d-flex justify-content-between">
-													Literacy:&nbsp;<h5><Badge>{record.activity_pages.literacy}</Badge></h5>
+													Literacy:&nbsp;<p>{record.activity_pages.literacy}</p>
 												</ListGroupItemText>
 												<ListGroupItemText className="d-flex justify-content-between">
-													Numeracy:&nbsp;<h5><Badge>{record.activity_pages.numeracy}</Badge></h5>
+													Numeracy:&nbsp;<p>{record.activity_pages.numeracy}</p>
 												</ListGroupItemText>
 												<ListGroupItemText className="d-flex justify-content-between">
-													General Awareness:&nbsp;<h5><Badge>{record.activity_pages.general_awareness}</Badge></h5>
+													General Awareness:&nbsp;<p>{record.activity_pages.general_awareness}</p>
 												</ListGroupItemText>
 											</ListGroupItem>
 											<ListGroupItem className="d-flex flex-column">
@@ -122,10 +122,10 @@ export default class Nursery extends Component {
 													Worksheets
 											</ListGroupItemHeading>
 												<ListGroupItemText className="d-flex justify-content-between">
-													Chapter:&nbsp;<h5><Badge>{record.resources.worksheet.chapter}</Badge></h5>
+													Chapter:&nbsp;<p>{record.resources.worksheet.chapter}</p>
 												</ListGroupItemText>
 												<ListGroupItemText className="d-flex justify-content-between">
-													Worksheet:&nbsp;<h5><Badge>{record.resources.worksheet.worksheet}</Badge></h5>
+													Worksheet:&nbsp;<p>{record.resources.worksheet.worksheet}</p>
 												</ListGroupItemText>
 												<ListGroupItemHeading>
 													Lesson Plan
@@ -257,8 +257,8 @@ export default class Nursery extends Component {
 										</ListGroup>
 									</CardBody>
 								</Card>
-							</Col>))
-						}
+							))}
+						</Col>
 					</Row>
 				</div>
 			</React.Fragment>
