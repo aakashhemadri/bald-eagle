@@ -14,7 +14,6 @@ export default function load(callback, center, standard, student, date) {
 					});
 					var records = [];
 					var record = [];
-					console.log(data)
 					switch (standard) {
 						case 'Nursery':
 							for (record of data) {
