@@ -61,8 +61,7 @@ class Home extends Component {
 							<DropdownItem header>Choose your center</DropdownItem>
 							<DropdownItem divider />
 							<DropdownItem name="MC1" onClick={this.handleCenter}>Mount Carmel 1</DropdownItem>
-							<DropdownItem name="MC2" onClick={this.handleCenter}>Mount Carmel 2</DropdownItem>
-							<DropdownItem name="Douglas" onClick={this.handleCenter}>Douglas</DropdownItem>
+							<DropdownItem name="SVS" onClick={this.handleCenter}>Sri Vivekananda Sevalayam</DropdownItem>
 						</DropdownMenu>
 					</Dropdown>
 					<Dropdown className="p-1" name="class" isOpen={this.state.standardDropdown} toggle={this.toggle('standardDropdown')}>

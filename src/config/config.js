@@ -18,9 +18,16 @@ export default {
 				"VETRISELVAN", "VIJAYKUMAR M", "VISHAL"]
 		}
 	},
-	"MC2": {
+	"SVS": {
 		apiKey: "AIzaSyDrxZ4HWl45zNnv7A4sYLYOSdsew_kPGzA",
 		discoveryDocs: ["https://sheets.googleapis.com/$discovery/rest?version=v4"],
-		spreadsheetId: "14QqmSAbNoUyOZywd1i1hyM68eVmLTDIc7JEDIg86pHM"
+		spreadsheetId: "1mKXANNpdIOT71Dn6FcxiNbIu8g752ojjbTyToIe6d5o",
+		range: "Form responses 1!A:DO",
+		student: {
+			apiKey: "AIzaSyDrxZ4HWl45zNnv7A4sYLYOSdsew_kPGzA",
+			discoveryDocs: ["https://sheets.googleapis.com/$discovery/rest?version=v4"],
+			spreadsheetId: "1mKXANNpdIOT71Dn6FcxiNbIu8g752ojjbTyToIe6d5o",
+			range: "Student List!A2:A",
+		}
 	}
 }
