@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/bald-eagle/static/css/main.233d191c.chunk.css",
+    "main.js": "/bald-eagle/static/js/main.a03517b7.chunk.js",
+    "main.js.map": "/bald-eagle/static/js/main.a03517b7.chunk.js.map",
+    "runtime~main.js": "/bald-eagle/static/js/runtime~main.fe98685c.js",
+    "runtime~main.js.map": "/bald-eagle/static/js/runtime~main.fe98685c.js.map",
+    "static/css/2.39017165.chunk.css": "/bald-eagle/static/css/2.39017165.chunk.css",
+    "static/js/2.e4f86302.chunk.js": "/bald-eagle/static/js/2.e4f86302.chunk.js",
+    "static/js/2.e4f86302.chunk.js.map": "/bald-eagle/static/js/2.e4f86302.chunk.js.map",
+    "static/js/3.c671b688.chunk.js": "/bald-eagle/static/js/3.c671b688.chunk.js",
+    "static/js/3.c671b688.chunk.js.map": "/bald-eagle/static/js/3.c671b688.chunk.js.map",
+    "static/js/4.c736ba6d.chunk.js": "/bald-eagle/static/js/4.c736ba6d.chunk.js",
+    "static/js/4.c736ba6d.chunk.js.map": "/bald-eagle/static/js/4.c736ba6d.chunk.js.map",
+    "static/js/5.bb435c6a.chunk.js": "/bald-eagle/static/js/5.bb435c6a.chunk.js",
+    "static/js/5.bb435c6a.chunk.js.map": "/bald-eagle/static/js/5.bb435c6a.chunk.js.map",
+    "static/js/6.8ffdc271.chunk.js": "/bald-eagle/static/js/6.8ffdc271.chunk.js",
+    "static/js/6.8ffdc271.chunk.js.map": "/bald-eagle/static/js/6.8ffdc271.chunk.js.map",
+    "static/js/7.078a0b77.chunk.js": "/bald-eagle/static/js/7.078a0b77.chunk.js",
+    "static/js/7.078a0b77.chunk.js.map": "/bald-eagle/static/js/7.078a0b77.chunk.js.map",
+    "static/js/8.fd25215d.chunk.js": "/bald-eagle/static/js/8.fd25215d.chunk.js",
+    "static/js/8.fd25215d.chunk.js.map": "/bald-eagle/static/js/8.fd25215d.chunk.js.map",
+    "static/js/9.e5f621a5.chunk.js": "/bald-eagle/static/js/9.e5f621a5.chunk.js",
+    "static/js/9.e5f621a5.chunk.js.map": "/bald-eagle/static/js/9.e5f621a5.chunk.js.map",
+    "index.html": "/bald-eagle/index.html",
+    "precache-manifest.cbba4499ca87c3820824436e390d617d.js": "/bald-eagle/precache-manifest.cbba4499ca87c3820824436e390d617d.js",
+    "service-worker.js": "/bald-eagle/service-worker.js",
+    "static/css/2.39017165.chunk.css.map": "/bald-eagle/static/css/2.39017165.chunk.css.map",
+    "static/css/main.233d191c.chunk.css.map": "/bald-eagle/static/css/main.233d191c.chunk.css.map"
+  }
+}
